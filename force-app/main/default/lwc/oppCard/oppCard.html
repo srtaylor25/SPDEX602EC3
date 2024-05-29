@@ -1,0 +1,26 @@
+<template>
+    <lightning-card>
+        <article class="slds-tile slds-m-left_small">
+            <h3 class="slds-truncate" title={name}>
+                <a onclick={viewRecord}>{name}</a>
+                <lightning-icon class="slds-float_right" title="Edit" icon-name="utility:edit" size="x-small"
+                    onclick={editOpp}></lightning-icon>
+            </h3>
+            <div class="slds-tile__detail">
+                <dl class="slds-list_horizontal slds-wrap">
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Stage">Stage:</dt>
+                    <dd class="slds-item_detail slds-truncate" title={stage}>{stage}</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Amount">Amount:</dt>
+                    <dd class="slds-item_detail slds-truncate" title={amount}>
+                        <lightning-formatted-number value={amount} format-style="currency"></lightning-formatted-number>
+                    </dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Close Date">Close Date:</dt>
+                    <dd class="slds-item_detail slds-truncate" title={closeDate}>
+                        <lightning-formatted-date-time time-zone="UTC" value={closeDate} day="numeric" month="numeric"
+                            year="numeric"></lightning-formatted-date-time>
+                    </dd>
+                </dl>
+            </div>
+        </article>
+    </lightning-card>
+</template>

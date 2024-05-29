@@ -1,0 +1,18 @@
+<template>
+    <template lwc:if={casesToDisplay}>
+        <template for:each={cases} for:item="cas">
+            <div key={cas.fields.Id.value}>
+                <c-case-card
+                    subject={cas.fields.Subject.value}
+                    case-number={cas.fields.CaseNumber.value}
+                    priority={cas.fields.Priority.value}
+                    status={cas.fields.Status.value}
+                    case-id={cas.fields.Id.value}
+                ></c-case-card>
+            </div>
+        </template>
+    </template>
+    <template lwc:else>
+        <p>No case records to display....</p>
+    </template>
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <div class="slds-tile slds-m-left_small">
+            <h3 class="slds-truncate" title={caseNumber}>
+                <a>{caseNumber}</a>
+                <lightning-icon class="slds-float_right" title="Edit" icon-name="utility:edit" size="x-small"
+                    onclick={editCase}></lightning-icon>
+            </h3>
+            <div class="slds-tile__detail">
+                <dl class="slds-list_horizontal slds-wrap">
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Status">Status:</dt>
+                    <dd class="slds-item_detail slds-truncate" title={status}>{status}</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Priority">Priority:</dt>
+                    <dd class="slds-item_detail slds-truncate" title={priority}>{priority}</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Subject">Subject:</dt>
+                    <dd class="slds-item_detail slds-truncate" title={subject}>{subject}</dd>
+                </dl>
+            </div> 
+        </div>
+    </lightning-card>
+</template>

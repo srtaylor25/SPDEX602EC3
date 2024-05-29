@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contact Information" icon-name="standard:contact">
+        <template lwc:if={contact.data}>
+            <div class="slds-m-left_medium">
+                <p>Name: {name}</p>
+                <p>Title: {title}</p>
+                <p>Phone: {phone}</p>
+                <p>Email: {email}</p>
+            </div>
+        </template>
+        <template lwc:else>
+            <p>No record returned....</p>
+        </template>
+    </lightning-card>
+</template>

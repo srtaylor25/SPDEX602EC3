@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Opp Record Form Component</masterLabel>
+    <description>This component demonstrates the use of the lightning-record-form base component.</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="layoutType" type="String" label="Layout Type"
+                description="Layout Type can be Compact or Full" datasource="Compact, Full"></property>
+            <property name="formMode" type="String" label="Form Mode"
+                description="Form Mode can be readonly, view or edit." datasource="readonly, view, edit"></property>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

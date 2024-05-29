@@ -1,0 +1,21 @@
+<template>
+    <template if:true={editMode}>
+        <lightning-record-edit-form record-id={recordId} object-api-name={objectApiName} onsuccess={toggleMode}>
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="Amount"></lightning-input-field>
+            <lightning-input-field field-name="StageName"></lightning-input-field>
+            <lightning-input-field field-name="CloseDate"></lightning-input-field>
+            <lightning-button label="Cancel" onclick={toggleMode}></lightning-button>
+            <lightning-button label="Save" type="submit"></lightning-button>
+        </lightning-record-edit-form>
+    </template>
+    <template if:false={editMode}>
+        <lightning-record-view-form record-id={recordId} object-api-name={objectApiName}>
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Amount"></lightning-output-field>
+            <lightning-output-field field-name="StageName"></lightning-output-field>
+            <lightning-output-field field-name="CloseDate"></lightning-output-field>
+            <lightning-button label="Edit" title="Edit" onclick={toggleMode}></lightning-button>
+        </lightning-record-view-form>
+    </template>
+</template>
